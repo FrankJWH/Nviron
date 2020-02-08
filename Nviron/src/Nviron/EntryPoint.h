@@ -7,7 +7,11 @@
 extern Nviron::Application* Nviron::CreateApplication(); // found externally in SandboxApp.cpp
 
 int main(int argc, char **argv) {
-	printf("Welcome to Nviron: Game Ngine for the future");
+	Nviron::Log::Init();
+	NV_CORE_WARN("Initialized log!");
+	int a = 5;
+	NV_CLIENT_INFO("Hello! Var={0}", a);
+
 	auto app = Nviron::CreateApplication();
 	app->Run();
 	delete app;

@@ -2,8 +2,8 @@
 
 // Nviron master include header
 
-#include <stdio.h>
 #include "Nviron/Application.h"
+#include "Nviron/Log.h"
 
 /***** Application Entry Point Include *****/
 
