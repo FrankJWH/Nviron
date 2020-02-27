@@ -18,6 +18,8 @@ project "Nviron"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "hzpch.h"
+	pchsource "Nviron/src/hzpch.cpp"
 
 	files
 	{
@@ -27,6 +29,7 @@ project "Nviron"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 

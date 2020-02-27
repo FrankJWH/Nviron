@@ -4,6 +4,9 @@
     <Filter Include="Nviron">
       <UniqueIdentifier>{C13864C6-ADDA-8E9C-9695-A2F082D615ED}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nviron\Events">
+      <UniqueIdentifier>{85618C7D-F121-08B4-BA5C-513126DC4C90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nviron.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\Nviron\EntryPoint.h">
       <Filter>Nviron</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nviron\Events\ApplicationEvent.h">
+      <Filter>Nviron\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nviron\Events\Event.h">
+      <Filter>Nviron\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nviron\Events\KeyEvent.h">
+      <Filter>Nviron\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nviron\Events\MouseEvent.h">
+      <Filter>Nviron\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nviron\Log.h">
       <Filter>Nviron</Filter>
     </ClInclude>
+    <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nviron\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\Nviron\Log.cpp">
       <Filter>Nviron</Filter>
     </ClCompile>
+    <ClCompile Include="src\hzpch.cpp" />
   </ItemGroup>
 </Project>
