@@ -7,4 +7,4 @@
 
 /***** Application Entry Point Include *****/
 
-#include "Nviron\EntryPoint.h"
+#include "Nviron/EntryPoint.h"
