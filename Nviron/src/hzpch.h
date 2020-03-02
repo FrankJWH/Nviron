@@ -14,6 +14,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include <Nviron/Log.h>
+
 #ifdef NV_PLATFORM_WINDOWS
 	#include	 <Windows.h>
 #endif // NV_PLATFORM_WINDOWS

@@ -1,3 +1,6 @@
 [submodule "Nviron/vendor/spdlog"]
 	path = Nviron/vendor/spdlog
 	url = https://www.github.com/gabime/spdlog
+[submodule "Nviron/vendor/GLFW"]
+	path = Nviron/vendor/GLFW
+	url = https://github.com/TheCherno/glfw.git

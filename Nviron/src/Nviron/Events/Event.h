@@ -1,5 +1,6 @@
 #pragma once
 
+#include "hzpch.h"
 #include "Nviron/Core.h"
 
 namespace Nviron {

@@ -9,6 +9,12 @@ workspace "Nviron"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- include directories relative to root folder
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nviron/vendor/GLFW/include"
+
+include	"Nviron/vendor/GLFW"
 	
 project "Nviron"
 	location "Nviron"
@@ -30,9 +36,15 @@ project "Nviron"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
 	}
 
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
+	}
 
 	filter "system:windows"
 		cppdialect "C++17"
