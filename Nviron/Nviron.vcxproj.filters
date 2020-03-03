@@ -40,13 +40,13 @@
     <ClInclude Include="src\Nviron\Log.h">
       <Filter>Nviron</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nviron\Window.h">
+      <Filter>Nviron</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\hzpch.h" />
-    <ClInclude Include="src\Nviron\Window.h">
-      <Filter>Nviron</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nviron\Application.cpp">

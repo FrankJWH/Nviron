@@ -16,7 +16,7 @@ namespace Nviron {
 			return ss.str();
 		}
 
-		EVENT_CLASS_CATEGORY(MouseMoved)
+		EVENT_CLASS_TYPE(MouseMoved)
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
 		float m_MouseX, m_MouseY;
@@ -31,11 +31,11 @@ namespace Nviron {
 
 		std::string ToString() const override { 
 			std::stringstream ss;
-			ss << "MouseScrolledEvent: " << m_MouseX << ", " << m_MouseY;
+			ss << "MouseScrolledEvent: " << GetXOffset() << ", " << GetYOffset();
 			return ss.str();
 		}
 
-		EVENT_CLASS_CATEGORY(MouseScrolled)
+		EVENT_CLASS_TYPE(MouseScrolled)
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
 		float m_XOffset, m_YOffset;
@@ -54,7 +54,7 @@ namespace Nviron {
 
 	class NVIRON_API	MouseButtonPressedEvent : public MouseButtonEvent {
 	public:
-		MouseButtonEvent(int button) : MouseButtonEvent(button) {}
+		MouseButtonPressedEvent(int button) : MouseButtonEvent(button) {}
 
 		std::string ToString() const override {
 			std::stringstream ss;
@@ -67,7 +67,7 @@ namespace Nviron {
 
 	class NVIRON_API MouseButtonReleasedEvent : public MouseButtonEvent {
 	public:
-		MouseButtonReleasedEvent(int button) : MouseButtonReleasedEvent(button) {}
+		MouseButtonReleasedEvent(int button) : MouseButtonEvent(button) {}
 
 		std::string ToString() const override {
 			std::stringstream ss;
