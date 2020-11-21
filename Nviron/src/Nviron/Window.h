@@ -5,8 +5,16 @@
 #include "Nviron/Core.h"
 #include "Nviron/Events/Event.h"
 
+/*
+	Window module responsible for constructing and declaring a basic
+	window structure including the properties that need to be set to
+	have simple window to be set up and the interface for event system
+	to attach to.
+*/
 namespace Nviron {
 
+	// settings struct to define the core minumum attributes for a window
+	// to be built. Consumed by window to set the properties
 	struct WindowProps {
 		std::string Title;
 		unsigned int Width;
@@ -16,6 +24,7 @@ namespace Nviron {
 			: Title(title), Width(width), Height(height) {}
 	};
 
+	//
 	class NVIRON_API Window {
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
@@ -32,7 +41,7 @@ namespace Nviron {
 		virtual void SetVSync(bool enabled) = 0;
 		virtual bool IsVSync() const = 0;
 
-		// platform dependent static function
+		// platform dependent static function, must be impl per platform
 		static Window* Create(const WindowProps& props = WindowProps());
 	};
 }
