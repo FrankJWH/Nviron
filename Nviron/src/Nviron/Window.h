@@ -27,6 +27,7 @@ namespace Nviron {
 	//
 	class NVIRON_API Window {
 	public:
+		// creates a callback func which returns void and takes a Event& param
 		using EventCallbackFn = std::function<void(Event&)>;
 
 		virtual ~Window() {}
