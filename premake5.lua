@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- include directories relative to root folder
 IncludeDir = {}
 IncludeDir["GLFW"] = "Nviron/vendor/GLFW/include"
+IncludeDir["Glad"] = "Nviron/vendor/Glad/include"
 
 include	"Nviron/vendor/GLFW"
+include	"Nviron/vendor/Glad"
 	
 project "Nviron"
 	location "Nviron"
@@ -37,12 +39,14 @@ project "Nviron"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -54,7 +58,8 @@ project "Nviron"
 		defines
 		{
 			"NV_PLATFORM_WINDOWS",
-			"NV_BUILD_DLL"
+			"NV_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands 
