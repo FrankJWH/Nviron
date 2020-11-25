@@ -1,8 +1,6 @@
 #include "hzpch.h"
 #include "Log.h"
 
-#include <memory>
-
 #include "Core.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
 

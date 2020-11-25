@@ -37,6 +37,12 @@
     <ClInclude Include="src\Nviron\Events\MouseEvent.h">
       <Filter>Nviron\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nviron\Layer.h">
+      <Filter>Nviron</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nviron\LayerStack.h">
+      <Filter>Nviron</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nviron\Log.h">
       <Filter>Nviron</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nviron\Application.cpp">
+      <Filter>Nviron</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nviron\Layer.cpp">
+      <Filter>Nviron</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nviron\LayerStack.cpp">
       <Filter>Nviron</Filter>
     </ClCompile>
     <ClCompile Include="src\Nviron\Log.cpp">

@@ -64,14 +64,17 @@ project "Nviron"
 
 	filter "configurations:Debug"
 		defines "NV_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "NV_DEBUG"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "NV_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -113,13 +116,16 @@ project "Sandbox"
 		
 	filter "configurations:Debug"
 		defines "NV_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "NV_DEBUG"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "NV_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
