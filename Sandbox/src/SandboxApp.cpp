@@ -17,6 +17,7 @@ class Sandbox : public Nviron::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Nviron::ImGuiLayer());
 	}
 
 	~Sandbox() {

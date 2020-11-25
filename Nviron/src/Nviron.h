@@ -5,6 +5,7 @@
 #include "Nviron/Application.h"
 #include "Nviron/LayerStack.h"
 #include "Nviron/Log.h"
+#include "Nviron/ImGui/ImGuiLayer.h"
 
 /***** Application Entry Point Include *****/
 
