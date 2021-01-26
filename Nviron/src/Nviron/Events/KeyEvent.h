@@ -5,7 +5,7 @@
 namespace Nviron {
 	class NVIRON_API KeyEvent : public Event {
 	public:
-		inline int GetKeyCoe() const { return m_KeyCode; }
+		inline int GetKeyCode() const { return m_KeyCode; }
 
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
 	protected:
@@ -44,5 +44,21 @@ namespace Nviron {
 		}
 
 		EVENT_CLASS_TYPE(KeyReleased)
+	};
+
+	class NVIRON_API KeyTypedEvent : public KeyEvent {
+	public:
+		KeyTypedEvent(int keycode) : KeyEvent(keycode) {}
+
+		std::string ToString() const override {
+			std::stringstream ss;
+			ss << "KeyTypedEvent: " << m_KeyCode;
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(KeyTyped)
+
+	private:
+		int m_RepeatCount;
 	};
 }
