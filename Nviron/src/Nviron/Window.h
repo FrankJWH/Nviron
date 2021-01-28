@@ -42,6 +42,9 @@ namespace Nviron {
 		virtual void SetVSync(bool enabled) = 0;
 		virtual bool IsVSync() const = 0;
 
+		// Access GLFW window (or any window, i.e. void*) without exposing the private member within the inheriting class
+		virtual void* GetNativeWindow() const = 0;
+
 		// platform dependent static function, must be impl per platform
 		static Window* Create(const WindowProps& props = WindowProps());
 	};
